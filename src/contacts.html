@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Event Agency</title>
+    <!-- Bootstrap 5 от CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+        .footer {
+            margin-top: auto;
+        }
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== ХЕДЕР ===== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="/">🎉 EventAgency</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== ОСНОВНОЙ КОНТЕНТ (БОДИ) ===== -->
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <h1 class="mb-4 text-center">📞 Свяжитесь с нами</h1>
+                <p class="text-center text-muted mb-5">Мы всегда рады помочь вам организовать идеальное мероприятие!</p>
+
+                <div class="row">
+                    <!-- Контактная информация -->
+                    <div class="col-lg-5 mb-4">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Наши контакты</h4>
+                                <div class="mb-3">
+                                    <span class="contact-icon">📍</span>
+                                    <strong>Адрес:</strong> г. Краснодар, ул. Атарбекова, д. 1
+                                </div>
+                                <div class="mb-3">
+                                    <span class="contact-icon">📱</span>
+                                    <strong>Телефон:</strong> +7 (964) 123-45-67
+                                </div>
+                                <div class="mb-3">
+                                    <span class="contact-icon">✉️</span>
+                                    <strong>Email:</strong> info@event-agency.ru
+                                </div>
+                                <div class="mb-3">
+                                    <span class="contact-icon">🕐</span>
+                                    <strong>Режим работы:</strong> Пн-Пт 10:00–20:00
+                                </div>
+                                <div class="mt-4">
+                                    <a href="#" class="btn btn-outline-primary me-2">Telegram</a>
+                                    <a href="#" class="btn btn-outline-primary me-2">WhatsApp</a>
+                                    <a href="#" class="btn btn-outline-primary">Instagram</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Форма обратной связи (POST) -->
+                    <div class="col-lg-7 mb-4">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Напишите нам</h4>
+                                <form action="/contacts" method="POST">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="name" class="form-label">Имя *</label>
+                                            <input type="text" class="form-control" id="name" name="name" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">Email *</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Телефон</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="event_type" class="form-label">Тип мероприятия</label>
+                                        <select class="form-select" id="event_type" name="event_type">
+                                            <option value="">Выберите...</option>
+                                            <option value="wedding">Свадьба</option>
+                                            <option value="corporate">Корпоратив</option>
+                                            <option value="opening">Открытие</option>
+                                            <option value="birthday">День рождения</option>
+                                            <option value="other">Другое</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Сообщение *</label>
+                                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Отправить заявку</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== ФУТЕР ===== -->
+    <footer class="bg-dark text-white py-4 footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2026 EventAgency. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Политика конфиденциальности</a>
+                    <a href="/contacts" class="text-white text-decoration-none">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
