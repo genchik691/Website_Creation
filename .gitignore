@@ -1,0 +1,65 @@
+# Виртуальные окружения (Python)
+venv/
+.venv/
+env/
+ENV/
+
+# Кэш и байт-код Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Переменные окружения и секреты
+.env
+.env.local
+.env.*.local
+!/.env.example
+
+# Базы данных (в том числе локальные SQLite/PG для тестов)
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+*.log
+
+# PostgreSQL (если у тебя есть дампы или тестовые файлы БД)
+*.dump
+*.sql.backup
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Тестирование и покрытие
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Документация (если генерируешь отдельно)
+docs/_build/
+
+# Прочее
+.DS_Store
+Thumbs.db
